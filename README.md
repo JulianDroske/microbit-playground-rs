@@ -10,6 +10,10 @@ Loop letters and digits using buttons A and B:
 cargo run --example letters
 ```
 
+### Other examples
+
+- `hello`: show "HELLO WORLD" on the LED matrix.
+
 
 ## Links
 
