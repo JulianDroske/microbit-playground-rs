@@ -13,7 +13,7 @@ cargo run --example letters
 ### Other examples
 
 - `hello`: show "HELLO WORLD" on the LED matrix.
-
+- `banner`: show a scrolling banner on the LED matrix.
 
 ## Links
 

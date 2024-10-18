@@ -438,8 +438,8 @@ fn main() -> ! {
     let mut timer = Timer::new(board.TIMER0);
     let mut display = Display::new(board.display_pins);
 
-    // extra space to make the last message loop more smooth
-    let message = "HELLO WORLD  ";
+    // extra space to make the message shift in and out
+    let message = "  HELLO WORLD  ";
 
     loop {
         for (c0, c1) in message.chars().zip(message.chars().skip(1)) {
