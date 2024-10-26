@@ -8,9 +8,10 @@ use panic_rtt_target as _;
 use rtt_target::rprintln;
 use rtt_target::rtt_init_print;
 
-mod libplayground;
-use libplayground::font::FONT5X5;
+use microbit_playground::font::FONT5X5;
 
+
+const FONT_LENGTH: usize = FONT5X5.len();
 
 #[entry]
 fn main() -> ! {
@@ -35,7 +36,7 @@ fn main() -> ! {
             rprintln!("button b pressed");
 
             idx += 1;
-            if idx == 38 {
+            if idx == FONT_LENGTH {
                 idx = 0;
             }
         } else if buttons.button_a.is_low().unwrap() {
@@ -43,7 +44,7 @@ fn main() -> ! {
             idx -= 1;
 
             if idx == 0 {
-                idx = 37;
+                idx = FONT_LENGTH - 1;
             }
         }
 

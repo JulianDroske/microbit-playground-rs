@@ -8,8 +8,8 @@ use panic_rtt_target as _;
 use rtt_target::rprintln;
 use rtt_target::rtt_init_print;
 
-mod libplayground;
-use libplayground::font::FONT5X5;
+use microbit_playground::font::FONT5X5;
+
 
 fn find_char(c: char) -> [[u8; 5]; 5] {
     for (font, ch) in FONT5X5.iter() {
